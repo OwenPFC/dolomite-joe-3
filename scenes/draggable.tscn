@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://duup1qfwfxni"]
+
+[ext_resource type="Script" uid="uid://7ssugg1leqev" path="res://scripts/draggable.gd" id="1_15mg1"]
+[ext_resource type="Texture2D" uid="uid://b1k6pvbd0kmot" path="res://homeowgenicfull.jpg" id="2_ahypq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2f0d4"]
+size = Vector2(128, 142)
+
+[node name="draggable" type="Area2D" unique_id=1714278729]
+script = ExtResource("1_15mg1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1036637384]
+position = Vector2(-6.0000076, -7.9999924)
+scale = Vector2(0.38922155, 0.43993995)
+texture = ExtResource("2_ahypq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1353178821]
+position = Vector2(-6, -9)
+shape = SubResource("RectangleShape2D_2f0d4")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
