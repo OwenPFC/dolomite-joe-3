@@ -10,5 +10,5 @@ position = Vector2(323, 252)
 scale = Vector2(2, 2)
 
 [node name="draggable" parent="." unique_id=1714278729 instance=ExtResource("2_pgd0o")]
-position = Vector2(547, 177)
+position = Vector2(517, 107)
 scale = Vector2(0.53571486, 0.45823917)
