@@ -7,4 +7,5 @@
 script = ExtResource("1_ukw5w")
 
 [node name="mop" parent="." unique_id=1714278729 instance=ExtResource("2_whr1e")]
+top_level = true
 position = Vector2(845, 318)

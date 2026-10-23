@@ -1,10 +1,12 @@
 extends Node2D
-var size = randf_range(1,1.5)
+var size = randf_range(0.7,1.3)
 signal done(moppable)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	global_position = Vector2(300,300)
+	global_position = Vector2(
+		300+randi_range(-200,600),300+randi_range(-200,300)
+		)
 	scale.x = size
 	scale.y = size
 
