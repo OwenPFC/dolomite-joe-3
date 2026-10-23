@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://de4lolubxcqj4"]
 
 [ext_resource type="Script" uid="uid://dfo0tguv4fqfj" path="res://scripts/moppable.gd" id="1_rgyn5"]
-[ext_resource type="PackedScene" uid="uid://boo8qf0oeoa1k" path="res://scenes/mop.tscn" id="2_cnl2v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_de54k"]
 radius = 142.00352
@@ -12,10 +11,6 @@ script = ExtResource("1_rgyn5")
 [node name="Area2D" type="Area2D" parent="." unique_id=619343008]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1350746055]
-position = Vector2(529, 279)
 shape = SubResource("CircleShape2D_de54k")
-
-[node name="mop" parent="." unique_id=1714278729 instance=ExtResource("2_cnl2v")]
-position = Vector2(853, 214)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
