@@ -2,21 +2,24 @@ extends Node2D
 
 var toMop = []
 var moppable = load("res://scenes/moppable.tscn")
+var numMoppable = randi_range(2,5)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	toMop.append(moppable.instantiate())
-	toMop.append(moppable.instantiate())
-	toMop.append(moppable.instantiate())
-	for mopp in toMop:
-		mopp.connect("done", _on_moppable_done)
-		add_child(mopp)
-
+	var i = 0
+	while (i < numMoppable):
+		toMop.append(moppable.instantiate())
+		toMop[i].connect("done", _on_moppable_done)
+		add_child(toMop[i])
+		i+=1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if toMop.is_empty():
+		print("You did it!!! No more sleeping with the fishies...")
+		self.free()
 
 
 func _on_moppable_done(moppable) -> void:
 	moppable.queue_free()
+	toMop.pop_back()
