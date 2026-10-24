@@ -12,9 +12,9 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area is draggable:
+	if area.get_parent() is Grocery:
 		$AudioStreamPlayer.play()
-		area.scanned = true
+		area.get_parent().scanned = true
 		
 func new_customer():
 	pass

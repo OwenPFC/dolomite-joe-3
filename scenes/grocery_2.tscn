@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b7k4j8xnqe4gu"]
+
+[ext_resource type="Script" uid="uid://dpbit6ggvirxn" path="res://grocery_2.gd" id="1_0g31t"]
+[ext_resource type="Texture2D" uid="uid://c0odwy2lu04my" path="res://assets/groceries/cereal.png" id="2_oofbo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2f0d4"]
+size = Vector2(134, 156)
+
+[node name="grocery2" type="Node2D" unique_id=1362922571]
+script = ExtResource("1_0g31t")
+
+[node name="Button" type="Button" parent="." unique_id=160994808]
+offset_left = -75.0
+offset_top = -80.0
+offset_right = 79.0
+offset_bottom = 81.0
+icon = ExtResource("2_oofbo")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=176511143]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=984427463]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_2f0d4")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
