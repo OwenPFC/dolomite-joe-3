@@ -13,7 +13,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	#print(mousein)
 	if mousein and Input.is_action_pressed("click"):
-		print("dragging")
 		dragging = true
 	else:
 		dragging = false
