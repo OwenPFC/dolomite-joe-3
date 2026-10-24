@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7ikhr8s6ayoc"
-path="res://.godot/imported/splat_geigerfish.jpg-7cc52a54063ac65b3c90b9e5a40399e8.ctex"
+uid="uid://bi8o7uwbrksvc"
+path="res://.godot/imported/splat_water.png-0d0add0cbe39d626e835baea015595b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/floor/splat_geigerfish.jpg"
-dest_files=["res://.godot/imported/splat_geigerfish.jpg-7cc52a54063ac65b3c90b9e5a40399e8.ctex"]
+source_file="res://assets/floor/splat_water.png"
+dest_files=["res://.godot/imported/splat_water.png-0d0add0cbe39d626e835baea015595b4.ctex"]
 
 [params]
 

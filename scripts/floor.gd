@@ -2,7 +2,7 @@ extends Node2D
 
 var toMop = []
 var moppable = load("res://scenes/moppable.tscn")
-var numMoppable = randi_range(2,5)
+var numMoppable = randi_range(12,24)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

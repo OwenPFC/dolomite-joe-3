@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddn243iy8a845"
-path="res://.godot/imported/splat_tomato.jpg-f859e22f82d11d0e14ed49731a1a4844.ctex"
+uid="uid://dkwss5w3b5ajm"
+path="res://.godot/imported/splat_tomato.png-e0fc344a6b745bf488817fd2f5d95e40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/floor/splat_tomato.jpg"
-dest_files=["res://.godot/imported/splat_tomato.jpg-f859e22f82d11d0e14ed49731a1a4844.ctex"]
+source_file="res://assets/floor/splat_tomato.png"
+dest_files=["res://.godot/imported/splat_tomato.png-e0fc344a6b745bf488817fd2f5d95e40.ctex"]
 
 [params]
 
