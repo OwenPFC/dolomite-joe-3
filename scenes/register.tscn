@@ -1,24 +1,24 @@
 [gd_scene format=3 uid="uid://7uupl4ah6y5"]
 
 [ext_resource type="Script" uid="uid://cvxgrnhrx77iu" path="res://scripts/register.gd" id="1_th0y5"]
-[ext_resource type="Texture2D" uid="uid://dk2wgbmfj2s0h" path="res://assets/white.png" id="2_ul2ju"]
+[ext_resource type="Texture2D" uid="uid://dll6ynq5txk5r" path="res://assets/register_draft.png" id="2_ul2ju"]
 [ext_resource type="AudioStream" uid="uid://c745x0pv18rku" path="res://assets/audio/beep.wav" id="3_ul2ju"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2f0d4"]
-size = Vector2(20, 21)
+size = Vector2(76, 192)
 
 [node name="register" type="Node2D" unique_id=1592666283]
 script = ExtResource("1_th0y5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=907601451]
-position = Vector2(-13.5516815, 2.4338455)
-scale = Vector2(-71.00763, 25.883831)
+position = Vector2(-4, 3)
+scale = Vector2(0.84793943, 0.78391415)
 texture = ExtResource("2_ul2ju")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1271980654]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1764975088]
-position = Vector2(-29, -33.5)
+position = Vector2(-171, 3)
 shape = SubResource("RectangleShape2D_2f0d4")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1571564429]

@@ -9,10 +9,11 @@ var scanned = false
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	#print(mousein)
 	if mousein and Input.is_action_pressed("click"):
+		print("dragging")
 		dragging = true
 	else:
 		dragging = false
@@ -20,7 +21,8 @@ func _process(delta: float) -> void:
 		global_position = get_global_mouse_position()
 
 func _on_mouse_entered() -> void:
-	mousein=true
+	if !Input.is_action_pressed("click"):
+		mousein=true
 
 func _on_mouse_exited() -> void:
 	if !Input.is_action_pressed("click"):
