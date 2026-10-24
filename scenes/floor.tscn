@@ -2,13 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cgextups4ti1j" path="res://scripts/floor.gd" id="1_ukw5w"]
 [ext_resource type="PackedScene" uid="uid://boo8qf0oeoa1k" path="res://scenes/mop.tscn" id="2_whr1e"]
-[ext_resource type="PackedScene" uid="uid://de4lolubxcqj4" path="res://scenes/moppable.tscn" id="3_3lc0u"]
 
 [node name="Floor" type="Node2D" unique_id=882505732]
 script = ExtResource("1_ukw5w")
 
 [node name="mop" parent="." unique_id=1714278729 instance=ExtResource("2_whr1e")]
+top_level = true
 position = Vector2(845, 318)
-
-[node name="Moppable" parent="." unique_id=1693524785 instance=ExtResource("3_3lc0u")]
-position = Vector2(358, 216)
