@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://0ge2k37uk0t3"]
+
+[ext_resource type="PackedScene" uid="uid://duup1qfwfxni" path="res://scenes/draggable.tscn" id="1_p3sf3"]
+[ext_resource type="Script" uid="uid://kyrmfg0sju0d" path="res://scripts/grocery.gd" id="2_kvuuk"]
+[ext_resource type="Texture2D" uid="uid://dk2wgbmfj2s0h" path="res://assets/white.png" id="3_kvuuk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2f0d4"]
+size = Vector2(41, 38)
+
+[node name="grocery" unique_id=1714278729 instance=ExtResource("1_p3sf3")]
+script = ExtResource("2_kvuuk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0" unique_id=1384516591]
+position = Vector2(9.536743e-07, 1.9073486e-06)
+texture = ExtResource("3_kvuuk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=670858258]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_2f0d4")

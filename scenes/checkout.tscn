@@ -1,14 +1,23 @@
 [gd_scene format=3 uid="uid://bii0nryflps47"]
 
+[ext_resource type="Texture2D" uid="uid://nmnv62p4lsxo" path="res://assets/background.jpg" id="1_okuuy"]
 [ext_resource type="PackedScene" uid="uid://7uupl4ah6y5" path="res://scenes/register.tscn" id="1_w0upb"]
-[ext_resource type="PackedScene" uid="uid://duup1qfwfxni" path="res://scenes/draggable.tscn" id="2_pgd0o"]
+[ext_resource type="PackedScene" uid="uid://ccxdw3vow56b5" path="res://scenes/customer.tscn" id="3_pgd0o"]
+[ext_resource type="Texture2D" uid="uid://cianpm86r58o0" path="res://assets/bag.png" id="5_okuuy"]
 
 [node name="checkout" type="Node2D" unique_id=301317347]
 
-[node name="register" parent="." unique_id=1592666283 instance=ExtResource("1_w0upb")]
-position = Vector2(323, 252)
-scale = Vector2(2, 2)
+[node name="Background" type="Sprite2D" parent="." unique_id=889772742]
+position = Vector2(643, 154)
+texture = ExtResource("1_okuuy")
 
-[node name="draggable" parent="." unique_id=1714278729 instance=ExtResource("2_pgd0o")]
-position = Vector2(517, 107)
-scale = Vector2(0.53571486, 0.45823917)
+[node name="register" parent="." unique_id=1592666283 instance=ExtResource("1_w0upb")]
+position = Vector2(718, 505)
+
+[node name="Customer" parent="." unique_id=1307362305 instance=ExtResource("3_pgd0o")]
+position = Vector2(662, 563)
+
+[node name="Bag" type="Sprite2D" parent="." unique_id=566441662]
+position = Vector2(87, 566)
+scale = Vector2(0.57098764, 0.759366)
+texture = ExtResource("5_okuuy")
