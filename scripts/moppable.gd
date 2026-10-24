@@ -18,6 +18,5 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area is draggable:
-		var remove = randf_range(0.1,0.2);
-		scale.x -= remove
-		scale.y -= remove
+		scale.x -= 0.05
+		scale.y -= 0.05

@@ -16,7 +16,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if toMop.is_empty():
-		print("You did it!!! No more sleeping with the fishies...")
+		print("Your did it!!! No more sleeping with the fishieses...")
 		self.free()
 
 
