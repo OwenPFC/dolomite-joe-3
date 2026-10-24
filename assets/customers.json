@@ -1,3 +1,4 @@
-{"Blue":{"Sprite":"Blue", "Dialogue":["Hey it's me, the blue man", "Secret 2nd option", "Hey guys"]},
-"Meat":{"Sprite":"Meat", "Dialogue":["Meat.", "I love meat", "MEAT"]}
+{"blue":{"Sprite":"blue", "Dialogue":["Hey it's me, the blue man", "Secret 2nd option", "Hey guys"]},
+"meat":{"Sprite":"meat", "Dialogue":["Meat.", "I love meat", "MEAT"]},
+"kid":{"Sprite":"kid", "Dialogue":["Kills you"]}
 }
