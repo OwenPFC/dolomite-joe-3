@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bba6xx8p2gf15" path="res://assets/customers/meat.png" id="2_xss0h"]
 [ext_resource type="Texture2D" uid="uid://osywligbanvg" path="res://assets/customers/blue.png" id="3_8qg4y"]
 [ext_resource type="Texture2D" uid="uid://vcmfxyj5smdw" path="res://assets/customers/kid.png" id="4_rjbu2"]
+[ext_resource type="Texture2D" uid="uid://crb1llql6r0ac" path="res://assets/customers/mussorgsky.png" id="5_qqxhk"]
+[ext_resource type="Texture2D" uid="uid://dd0px5malodrp" path="res://assets/customers/purple.png" id="6_846g6"]
 
 [node name="Customer" type="Node2D" unique_id=1307362305]
 script = ExtResource("1_ktfjk")
@@ -25,6 +27,17 @@ visible = false
 position = Vector2(0, 151.99998)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_rjbu2")
+
+[node name="cart" type="Sprite2D" parent="." unique_id=82758729]
+visible = false
+position = Vector2(8, 23.999998)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_qqxhk")
+
+[node name="purple" type="Sprite2D" parent="." unique_id=146589723]
+visible = false
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_846g6")
 
 [node name="groceries" type="Node2D" parent="." unique_id=849439130]
 position = Vector2(0, 176)
