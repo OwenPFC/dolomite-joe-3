@@ -9,3 +9,5 @@
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=1827874901]
 scale = Vector2(5, 10)
 shape = SubResource("RectangleShape2D_cnl2v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=208804560]
