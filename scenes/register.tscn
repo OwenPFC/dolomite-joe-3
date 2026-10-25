@@ -1,28 +1,33 @@
 [gd_scene format=3 uid="uid://7uupl4ah6y5"]
 
 [ext_resource type="Script" uid="uid://cvxgrnhrx77iu" path="res://scripts/register.gd" id="1_th0y5"]
-[ext_resource type="Texture2D" uid="uid://dll6ynq5txk5r" path="res://assets/register_draft.png" id="2_ul2ju"]
+[ext_resource type="Texture2D" uid="uid://ho1o6coflisl" path="res://assets/register.png" id="2_ul2ju"]
 [ext_resource type="AudioStream" uid="uid://c745x0pv18rku" path="res://assets/audio/beep.wav" id="3_ul2ju"]
+[ext_resource type="Texture2D" uid="uid://bforx0enld4j4" path="res://assets/scanner.png" id="4_n2w5e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2f0d4"]
-size = Vector2(76, 192)
+size = Vector2(115, 178)
 
 [node name="register" type="Node2D" unique_id=1592666283]
 script = ExtResource("1_th0y5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=907601451]
-position = Vector2(-4, 3)
-scale = Vector2(0.84793943, 0.78391415)
+position = Vector2(47.50004, 3)
+scale = Vector2(0.96267354, 0.78391415)
 texture = ExtResource("2_ul2ju")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1271980654]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1764975088]
-position = Vector2(-171, 3)
+position = Vector2(63.5, -51)
 shape = SubResource("RectangleShape2D_2f0d4")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1571564429]
 stream = ExtResource("3_ul2ju")
 pitch_scale = 1.81
+
+[node name="Scanner" type="Sprite2D" parent="." unique_id=1501880291]
+position = Vector2(61, -52)
+texture = ExtResource("4_n2w5e")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

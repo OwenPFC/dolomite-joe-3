@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 #append random elements to the shoppers things to buy
 func init_items():
 	var offset_x = 0
-	for i in range(randi_range(10, 30)):
+	for i in range(randi_range(10, 20)):
 		var item = grocery.instantiate()
 		$groceries.add_child(item)
 		if item.global_position.x+offset_x < 1000:
@@ -35,6 +35,7 @@ func init_customer():
 	var customer_info = get_information(customer)
 	print(customer_info)
 	init_items()
+	get_node(customer).visible = true
 	
 	
 func get_information(name:String):
