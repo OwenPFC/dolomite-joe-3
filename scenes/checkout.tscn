@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bii0nryflps47"]
 
-[ext_resource type="Texture2D" uid="uid://nmnv62p4lsxo" path="res://assets/background.jpg" id="1_okuuy"]
+[ext_resource type="Texture2D" uid="uid://clt4kbp4d2rfx" path="res://assets/behind_register.jpg" id="1_8ge84"]
 [ext_resource type="PackedScene" uid="uid://7uupl4ah6y5" path="res://scenes/register.tscn" id="1_w0upb"]
 [ext_resource type="PackedScene" uid="uid://ccxdw3vow56b5" path="res://scenes/customer.tscn" id="3_pgd0o"]
 [ext_resource type="Texture2D" uid="uid://cianpm86r58o0" path="res://assets/bag.png" id="5_okuuy"]
@@ -8,14 +8,15 @@
 [node name="checkout" type="Node2D" unique_id=301317347]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=889772742]
-position = Vector2(643, 154)
-texture = ExtResource("1_okuuy")
+position = Vector2(578, 295)
+scale = Vector2(1, 1.1512346)
+texture = ExtResource("1_8ge84")
 
 [node name="register" parent="." unique_id=1592666283 instance=ExtResource("1_w0upb")]
-position = Vector2(718, 505)
+position = Vector2(559, 512)
 
 [node name="Customer" parent="." unique_id=1307362305 instance=ExtResource("3_pgd0o")]
-position = Vector2(662, 563)
+position = Vector2(825, 339)
 
 [node name="Bag" type="Sprite2D" parent="." unique_id=566441662]
 position = Vector2(87, 566)

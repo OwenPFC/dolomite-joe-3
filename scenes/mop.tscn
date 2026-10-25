@@ -1,13 +1,51 @@
 [gd_scene format=3 uid="uid://boo8qf0oeoa1k"]
 
 [ext_resource type="PackedScene" uid="uid://duup1qfwfxni" path="res://scenes/draggable.tscn" id="1_w2awh"]
+[ext_resource type="Texture2D" uid="uid://dq0urh7cksbje" path="res://assets/mops/IMG_3443.PNG" id="2_58ul3"]
+[ext_resource type="Texture2D" uid="uid://gwf87jja2fro" path="res://assets/mops/IMG_3444.PNG" id="3_5qreu"]
+[ext_resource type="Texture2D" uid="uid://b55sx0v1vnbej" path="res://assets/mops/IMG_3445.PNG" id="4_r547x"]
+[ext_resource type="Texture2D" uid="uid://chv3v4dlvajds" path="res://assets/mops/IMG_3446.PNG" id="5_yt8hf"]
+[ext_resource type="Texture2D" uid="uid://c040lmok658cm" path="res://assets/mops/IMG_3447.PNG" id="6_qsec7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnl2v"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_2f0d4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_58ul3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5qreu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r547x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yt8hf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qsec7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yt8hf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r547x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5qreu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="mop" unique_id=1714278729 instance=ExtResource("1_w2awh")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=1827874901]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." index="0" unique_id=1423432790]
 scale = Vector2(5, 10)
-shape = SubResource("RectangleShape2D_cnl2v")
+polygon = PackedVector2Array(-15.999999, 11.299999, -13.4, 6.7, -3.6, 5.1, 23.199999, -15.199999, 25.999998, -15.699999, 25.8, -13.799999, 2.3999999, 6.0999994, 11.199999, 6.2999997, 11.199999, 8.299999, 11.999999, 12.299999, 7.3999996, 14.099999, -9.2, 14.099999)
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=208804560]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." index="1" unique_id=877820769]
+sprite_frames = SubResource("SpriteFrames_2f0d4")
+autoplay = "default"
+frame_progress = 0.26363477
