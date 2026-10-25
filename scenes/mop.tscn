@@ -52,5 +52,5 @@ position = Vector2(-0.99999976, 0.5)
 scale = Vector2(0.114968136, 0.07034702)
 sprite_frames = SubResource("SpriteFrames_4kxuq")
 animation = &"moving"
-frame = 2
-frame_progress = 0.51684654
+autoplay = "moving"
+frame_progress = 0.60449195
