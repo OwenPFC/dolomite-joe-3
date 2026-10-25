@@ -1,4 +1,6 @@
 {"blue":{"Sprite":"blue", "Dialogue":["Hey it's me, the blue man", "Secret 2nd option", "Hey guys"]},
 "meat":{"Sprite":"meat", "Dialogue":["Meat.", "I love meat", "MEAT"]},
-"kid":{"Sprite":"kid", "Dialogue":["Kills you"]}
+"kid":{"Sprite":"kid", "Dialogue":["Kills you"]},
+"purple":{"Sprite":"purple", "Dialogue":["Kills you"]},
+"cart":{"Sprite":"cart", "Dialogue":["Kills you"]}
 }
