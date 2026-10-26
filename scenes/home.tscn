@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cgiw2rdddk6hf"]
+
+[ext_resource type="Texture2D" uid="uid://5e1ldrl735i6" path="res://assets/home_draft.jpg" id="1_krot7"]
+[ext_resource type="Script" uid="uid://b7vsd1u7c03sm" path="res://scripts/home.gd" id="1_u4wd2"]
+[ext_resource type="AudioStream" uid="uid://2ghv70u5mheh" path="res://assets/audio/dolomite3_home_sweat_home.wav" id="3_w18ys"]
+
+[node name="home" type="Node2D" unique_id=292318424]
+script = ExtResource("1_u4wd2")
+
+[node name="HomeDraft" type="Sprite2D" parent="." unique_id=416606212]
+position = Vector2(572.5, 329.50003)
+scale = Vector2(1.4523809, 0.667001)
+texture = ExtResource("1_krot7")
+
+[node name="Timer" type="Timer" parent="." unique_id=1853315548]
+wait_time = 20.0
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1035475279]
+stream = ExtResource("3_w18ys")
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

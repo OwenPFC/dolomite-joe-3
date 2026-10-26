@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 		done.emit()
 
 func new_day():
-	print("bye bye")
+	get_tree().change_scene_to_file("res://scenes/home.tscn")
 	pass
 
 #append random elements to the shoppers things to buy
