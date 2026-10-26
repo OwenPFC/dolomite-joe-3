@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cgiw2rdddk6hf"]
+
+[ext_resource type="Texture2D" uid="uid://ckvgwgndajmth" path="res://assets/puter.png" id="1_krot7"]
+[ext_resource type="PackedScene" uid="uid://boo8qf0oeoa1k" path="res://scenes/mop.tscn" id="2_u4wd2"]
+
+[node name="Home" type="Node2D" unique_id=1950749673]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1033898383]
+position = Vector2(576, 324)
+texture = ExtResource("1_krot7")
+
+[node name="mop" parent="." unique_id=1714278729 instance=ExtResource("2_u4wd2")]
