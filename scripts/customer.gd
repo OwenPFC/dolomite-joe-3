@@ -47,6 +47,7 @@ func init_items():
 		var type = all_items[randi_range(0, len(all_items)-1)]
 		var sprite = "res://assets/groceries/" + type + ".png"
 		item.set_sprite(sprite)
+		item.name = type
 
 func init_customer():
 	customer = pick_customer()

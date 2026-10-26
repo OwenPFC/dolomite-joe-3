@@ -11,6 +11,13 @@ var joe_text = ["Hey there bub. Cleanup on aisle 5.", "This place is filthy. Do 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+extends Node
+
+var register_total = load("res://scenes/register_total.tscn")
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$register.connect("sent", _on_total_tallied)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -46,3 +53,6 @@ func on_mop_done():
 	$speech/clean.visible = false
 	if get_node("Customer") != null:
 		get_node("Customer").done.emit()
+func _on_total_tallied(total) -> void:
+	register_total.instantiate()
+	register_total.total = total
