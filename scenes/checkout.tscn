@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://bii0nryflps47"]
 
 [ext_resource type="Texture2D" uid="uid://clt4kbp4d2rfx" path="res://assets/behind_register.jpg" id="1_8ge84"]
+[ext_resource type="Script" uid="uid://dqf6xbl7826ld" path="res://scripts/checkout.gd" id="1_okuuy"]
 [ext_resource type="PackedScene" uid="uid://7uupl4ah6y5" path="res://scenes/register.tscn" id="1_w0upb"]
 [ext_resource type="Texture2D" uid="uid://bforx0enld4j4" path="res://assets/scanner.png" id="3_pgd0o"]
+[ext_resource type="PackedScene" uid="uid://biinpk4iqe3w8" path="res://scenes/speech.tscn" id="5_ordwr"]
+[ext_resource type="FontFile" uid="uid://waf56aecnrdu" path="res://assets/PressStart2P-Regular.ttf" id="6_7v35x"]
 
 [node name="checkout" type="Node2D" unique_id=301317347]
+script = ExtResource("1_okuuy")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=889772742]
 position = Vector2(578, 295)
@@ -18,3 +22,17 @@ position = Vector2(559, 512)
 top_level = true
 position = Vector2(618, 523)
 texture = ExtResource("3_pgd0o")
+
+[node name="speech" parent="." unique_id=971826987 instance=ExtResource("5_ordwr")]
+position = Vector2(274, 26)
+
+[node name="clean" type="Button" parent="speech" unique_id=983256685]
+visible = false
+offset_left = 165.0
+offset_top = 164.0
+offset_right = 372.0
+offset_bottom = 220.0
+theme_override_fonts/font = ExtResource("6_7v35x")
+text = "Go clean."
+
+[connection signal="pressed" from="speech/clean" to="." method="_on_clean_pressed"]

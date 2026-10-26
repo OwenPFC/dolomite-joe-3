@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://st0j68dl1spf" path="res://assets/floor/creepy_floor.png.jpg" id="3_whr1e"]
 
 [node name="Floor" type="Node2D" unique_id=882505732]
+top_level = true
 script = ExtResource("1_ukw5w")
 
 [node name="mop" parent="." unique_id=1714278729 instance=ExtResource("2_whr1e")]

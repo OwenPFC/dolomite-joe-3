@@ -2,23 +2,32 @@ extends Node2D
 
 var dialogue = []
 var all_items = ["fish", "milk", "cereal", "tomato", "chorba", "rock"]
-var customers = ["meat", "blue", "kid", "purple", "cart"]
+var customers = ["meat", "blue", "kid", "purple", "cart", "joe"]
 var grocery = load("res://scenes/grocery_2.tscn")
 signal done
+signal joe
+signal add_customer(text)
 var customer
+var times_joe_seen = 0
+var day = 1
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	init_customer()
+	if get_parent() != null:
+		if !is_connected("joe", get_parent().on_joe):
+			connect("joe", get_parent().on_joe)
+		if !is_connected("add_customer", get_parent().on_add_customer):
+			connect("add_customer", get_parent().on_add_customer)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:	
-	if len($groceries.get_children()) == 0:
+func _process(delta: float) -> void:
+	if len($groceries.get_children()) == 0 and customer != "joe":
 		done.emit()
 
 func new_day():
-	#Resets the customers array
+	print("bye bye")
 	pass
 
 #append random elements to the shoppers things to buy
@@ -40,16 +49,33 @@ func init_items():
 		item.set_sprite(sprite)
 
 func init_customer():
-	customer = customers.pick_random()
-	customers.remove_at(customers.find(customer))
-	print(customers)
-	var customer_info = get_information(customer)
-	print(customer_info)
-	init_items()
-	get_node(customer).visible = true
+	customer = pick_customer()
+	if customer == null:
+		new_day()
+	else:
+		var customer_info = get_information(customer)
+		if customer != "joe":
+			init_items()
+			customers.remove_at(customers.find(customer))
+			add_customer.emit(customer_info["Dialogue"])
+		else:
+			times_joe_seen+=1
+			joe.emit()
+			if times_joe_seen > day:
+				customers.remove_at(customers.find(customer))
+		get_node(customer).visible = true
+	
+func pick_customer():
+	#Don't let joe be picked first
+	if len(customers) == 6:
+		return ["meat", "blue", "kid", "purple", "cart"].pick_random()
+	if len(customers) == 1 and times_joe_seen > 1:
+		return null
+	return customers.pick_random()
 	
 func make_invis():
-	get_node(customer).visible = false
+	if customer != null:
+		get_node(customer).visible = false
 	
 func get_information(name:String):
 	var file = FileAccess.open("res://assets/customers.json", FileAccess.READ)

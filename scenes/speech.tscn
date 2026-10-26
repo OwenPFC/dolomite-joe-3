@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://biinpk4iqe3w8"]
+
+[ext_resource type="Texture2D" uid="uid://dk2wgbmfj2s0h" path="res://assets/white.png" id="1_8eamh"]
+[ext_resource type="FontFile" uid="uid://co7p2i0d5xa2v" path="res://assets/Limelight/Limelight-Regular.ttf" id="1_j5wli"]
+[ext_resource type="Script" uid="uid://dvul8maej41q4" path="res://scenes/speech.gd" id="1_s10do"]
+
+[node name="speech" type="Node2D" unique_id=971826987]
+script = ExtResource("1_s10do")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1882240713]
+modulate = Color(0.28235295, 0.28235295, 0.28235295, 0.69411767)
+position = Vector2(287.06, 78.1499)
+rotation = 3.1415927
+scale = Vector2(286.06, -79.14989)
+texture = ExtResource("1_8eamh")
+
+[node name="Label" type="Label" parent="." unique_id=1592164720]
+offset_right = 575.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("1_j5wli")
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 2

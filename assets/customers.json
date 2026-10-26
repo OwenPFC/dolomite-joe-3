@@ -1,6 +1,33 @@
-{"blue":{"Sprite":"blue", "Dialogue":["Hey it's me, the blue man", "Secret 2nd option", "Hey guys"]},
-"meat":{"Sprite":"meat", "Dialogue":["Meat.", "I love meat", "MEAT"]},
-"kid":{"Sprite":"kid", "Dialogue":["Kills you"]},
-"purple":{"Sprite":"purple", "Dialogue":["Kills you"]},
-"cart":{"Sprite":"cart", "Dialogue":["Kills you"]}
+{"blue":{"Sprite":"blue", "Dialogue":
+	["d1", 
+	"d2", 
+	"d3",
+	"d4",
+	"d5"]},
+"meat":{"Sprite":"meat", "Dialogue":
+	["Your deli selection isn't very good.",
+	"Some bald guy was telling me I ordered too much meat at the deli. Does he work here?",
+	"It's my right to buy as much meat as I want. I won't let anybody tell me otherwise.",
+	"It's day 4",
+	"It's day 5"]},
+"kid":{"Sprite":"kid", "Dialogue":
+	["...",
+	"2",
+	"3",
+	"4",
+	"5"]},
+"purple":{"Sprite":"purple", "Dialogue":
+	["Haha! Oh chip chop cheerio. Teehee. I just LOVE these groceries. Don't you?  Haha! So delightful.",
+	"Nothing like a trip to the grocery store! Hahaha! It's like everything I need is right here!",
+	"3",
+	"4",
+	"5"]},
+"cart":{"Sprite":"cart", "Dialogue":
+	["Hey man. Yeah just uh. Just check me out. I'm ok. I'm doing well. I'm swell honestly",
+	"2",
+	"3",
+	"4",
+	"5"]},
+"joe":{"Sprite":"joe", "Dialogue":
+	["I'm dolomite joe I don't use ts"]}
 }

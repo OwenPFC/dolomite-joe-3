@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://vcmfxyj5smdw" path="res://assets/customers/kid.png" id="4_rjbu2"]
 [ext_resource type="Texture2D" uid="uid://crb1llql6r0ac" path="res://assets/customers/mussorgsky.png" id="5_qqxhk"]
 [ext_resource type="Texture2D" uid="uid://dd0px5malodrp" path="res://assets/customers/purple.png" id="6_846g6"]
+[ext_resource type="Texture2D" uid="uid://d10kn8yp6amsi" path="res://assets/customers/joe.png" id="7_qj8gj"]
 
 [node name="Customer" type="Node2D" unique_id=1307362305]
 script = ExtResource("1_ktfjk")
@@ -38,6 +39,11 @@ texture = ExtResource("5_qqxhk")
 visible = false
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_846g6")
+
+[node name="joe" type="Sprite2D" parent="." unique_id=1017312622]
+visible = false
+position = Vector2(-6, 43)
+texture = ExtResource("7_qj8gj")
 
 [node name="groceries" type="Node2D" parent="." unique_id=849439130]
 position = Vector2(0, 176)
