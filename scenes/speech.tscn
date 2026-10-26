@@ -9,14 +9,16 @@ script = ExtResource("1_s10do")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1882240713]
 modulate = Color(0.28235295, 0.28235295, 0.28235295, 0.69411767)
-position = Vector2(287.06, 78.1499)
+position = Vector2(294.00214, 78.1499)
 rotation = 3.1415927
-scale = Vector2(286.06, -79.14989)
+scale = Vector2(293.00214, -79.14989)
 texture = ExtResource("1_8eamh")
 
 [node name="Label" type="Label" parent="." unique_id=1592164720]
-offset_right = 575.0
-offset_bottom = 80.0
+offset_left = 9.0
+offset_top = 5.0
+offset_right = 584.0
+offset_bottom = 85.0
 theme_override_fonts/font = ExtResource("1_j5wli")
 theme_override_font_sizes/font_size = 30
 autowrap_mode = 2

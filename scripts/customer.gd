@@ -69,7 +69,9 @@ func pick_customer():
 	#Don't let joe be picked first
 	if len(customers) == 6:
 		return ["meat", "blue", "kid", "purple", "cart"].pick_random()
-	if len(customers) == 1 and times_joe_seen > 1:
+	if len(customers) == 1 and customers[0] == "joe" and times_joe_seen > 1:
+		return null
+	if len(customers) == 0:
 		return null
 	return customers.pick_random()
 	
