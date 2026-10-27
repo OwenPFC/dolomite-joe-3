@@ -9,8 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://d10kn8yp6amsi" path="res://assets/customers/joe.png" id="7_qj8gj"]
 [ext_resource type="Texture2D" uid="uid://bktn66t7owu0g" path="res://assets/customers/JTH.PNG" id="8_w2wat"]
 [ext_resource type="PackedScene" uid="uid://dnrmap6l76lfs" path="res://scenes/timer_display.tscn" id="9_pk6lr"]
+[ext_resource type="Texture2D" uid="uid://bdyciefo6xpog" path="res://assets/customers/granny.PNG" id="10_r88ql"]
 [ext_resource type="AudioStream" uid="uid://cm6vetoa7ei5t" path="res://assets/audio/death.mp3" id="10_t2aad"]
 [ext_resource type="FontFile" uid="uid://waf56aecnrdu" path="res://assets/PressStart2P-Regular.ttf" id="11_hnsn0"]
+[ext_resource type="Texture2D" uid="uid://c6y40xb0t8hw1" path="res://assets/customers/mail.PNG" id="12_hnsn0"]
 [ext_resource type="PackedScene" uid="uid://cv6wa0k8f3hth" path="res://scenes/transition.tscn" id="12_hnsn0"]
 [ext_resource type="AudioStream" uid="uid://ohaahf6mtoc2" path="res://assets/audio/modestas123123-cash-register-kaching-sound-effect-125042.mp3" id="13_r88ql"]
 
@@ -57,6 +59,18 @@ visible = false
 position = Vector2(0, 24)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("8_w2wat")
+
+[node name="mail" type="Sprite2D" parent="." unique_id=316690006]
+visible = false
+position = Vector2(10, -75)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("12_hnsn0")
+
+[node name="granny" type="Sprite2D" parent="." unique_id=1619607540]
+visible = false
+position = Vector2(10, 45)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("10_r88ql")
 
 [node name="groceries" type="Node2D" parent="." unique_id=849439130]
 position = Vector2(0, 176)
