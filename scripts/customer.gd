@@ -12,10 +12,13 @@ signal add_customer(text)
 var customer
 var times_joe_seen = 0
 var day = 1
+var fadein = false
+var dead = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$transition.fade_out()
 	if get_parent() != null:
 		if !is_connected("joe", get_parent().on_joe):
 			connect("joe", get_parent().on_joe)
@@ -32,7 +35,9 @@ func _process(delta: float) -> void:
 		done.emit()
 
 func new_day():
-	get_tree().change_scene_to_file("res://scenes/home.tscn")
+	$chaching.play()
+	$transition.fade_in()
+	fadein = true
 
 #append random elements to the shoppers things to buy
 func init_items():
@@ -54,6 +59,7 @@ func init_items():
 		item.grocery_name = type
 
 func init_customer():
+	$chaching.play()
 	$timer_display.set_register()
 	customer = pick_customer()
 	if customer == null:
@@ -104,11 +110,19 @@ func _on_timer_display_fail() -> void:
 		customer_fail.emit()
 		$Timer.start()
 		$death.play()
+		dead = true
 
 
 func _on_timer_timeout() -> void:
 	$menu.visible = true
+	$transition.fade_in()
+	fadein = true
 
 
 func _on_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+
+
+func _on_transition_animation_finished() -> void:
+	if fadein and !dead:
+		get_tree().change_scene_to_file("res://scenes/home.tscn")

@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://waf56aecnrdu" path="res://assets/PressStart2P-Regular.ttf" id="2_con2f"]
 [ext_resource type="Texture2D" uid="uid://dk2wgbmfj2s0h" path="res://assets/white.png" id="3_4ytvr"]
 [ext_resource type="AudioStream" uid="uid://2ghv70u5mheh" path="res://assets/audio/dolomite3_home_sweat_home.wav" id="3_mhnvy"]
+[ext_resource type="PackedScene" uid="uid://cv6wa0k8f3hth" path="res://scenes/transition.tscn" id="6_g3eks"]
 
 [node name="menu" type="Node2D" unique_id=1286997562]
 script = ExtResource("1_4ytvr")
@@ -69,7 +70,10 @@ text = "Dolomite Joe 3"
 stream = ExtResource("3_mhnvy")
 autoplay = true
 
+[node name="transition" parent="." unique_id=1524851347 instance=ExtResource("6_g3eks")]
+
 [connection signal="pressed" from="Computer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Computer/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Computer/reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="Computer/quit" to="." method="_on_quit_pressed"]
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]

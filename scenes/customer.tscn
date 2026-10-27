@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dnrmap6l76lfs" path="res://scenes/timer_display.tscn" id="9_pk6lr"]
 [ext_resource type="AudioStream" uid="uid://cm6vetoa7ei5t" path="res://assets/audio/death.mp3" id="10_t2aad"]
 [ext_resource type="FontFile" uid="uid://waf56aecnrdu" path="res://assets/PressStart2P-Regular.ttf" id="11_hnsn0"]
+[ext_resource type="PackedScene" uid="uid://cv6wa0k8f3hth" path="res://scenes/transition.tscn" id="12_hnsn0"]
+[ext_resource type="AudioStream" uid="uid://ohaahf6mtoc2" path="res://assets/audio/modestas123123-cash-register-kaching-sound-effect-125042.mp3" id="13_r88ql"]
 
 [node name="Customer" type="Node2D" unique_id=1307362305]
 script = ExtResource("1_ktfjk")
@@ -67,19 +69,29 @@ scale = Vector2(0.8, 0.8)
 stream = ExtResource("10_t2aad")
 
 [node name="Timer" type="Timer" parent="." unique_id=1248368541]
-wait_time = 10.0
+wait_time = 3.0
+one_shot = true
+
+[node name="transition" parent="." unique_id=1524851347 instance=ExtResource("12_hnsn0")]
+top_level = true
+position = Vector2(712, 310)
+scale = Vector2(3, 2.954)
 
 [node name="menu" type="Button" parent="." unique_id=2067616859]
 visible = false
 top_level = true
-offset_left = 844.0
-offset_top = 52.0
-offset_right = 992.0
-offset_bottom = 100.0
+offset_left = 482.0
+offset_top = 447.0
+offset_right = 630.0
+offset_bottom = 495.0
 theme_override_colors/icon_normal_color = Color(1, 0.5058824, 0, 1)
 theme_override_fonts/font = ExtResource("11_hnsn0")
 text = "Menu"
 
+[node name="chaching" type="AudioStreamPlayer" parent="." unique_id=1521239236]
+stream = ExtResource("13_r88ql")
+
 [connection signal="fail" from="timer_display" to="." method="_on_timer_display_fail"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
