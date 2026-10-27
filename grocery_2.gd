@@ -18,7 +18,6 @@ func _process(delta: float) -> void:
 func _on_button_button_up() -> void:
 	dragging = false
 
-
 func _on_button_button_down() -> void:
 	dragging = true
 	

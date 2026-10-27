@@ -1,22 +1,31 @@
 extends Node2D
 
 var dialogue = []
-var all_items = ["fish", "milk", "cereal"]
-var customers = ["meat", "blue", "kid"]
+var all_items = ["fish", "milk", "cereal", "tomato", "chorba", "rock"]
+var customers = ["meat", "blue", "kid", "purple", "cart"]
 var grocery = load("res://scenes/grocery_2.tscn")
+signal done
+var customer
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	init_customer()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(delta: float) -> void:	
+	if len($groceries.get_children()) == 0:
+		done.emit()
+
+func new_day():
+	#Resets the customers array
 	pass
 
 #append random elements to the shoppers things to buy
 func init_items():
 	var offset_x = 0
-	for i in range(randi_range(10, 20)):
+	#for i in range(randi_range(6, 15)):
+	for i in range(randi_range(1,2)):
 		var item = grocery.instantiate()
 		$groceries.add_child(item)
 		if item.global_position.x+offset_x < 1000:
@@ -29,14 +38,19 @@ func init_items():
 		var type = all_items[randi_range(0, len(all_items)-1)]
 		var sprite = "res://assets/groceries/" + type + ".png"
 		item.set_sprite(sprite)
+		item.name = type
 
 func init_customer():
-	var customer = customers.pick_random()
+	customer = customers.pick_random()
+	customers.remove_at(customers.find(customer))
+	print(customers)
 	var customer_info = get_information(customer)
 	print(customer_info)
 	init_items()
 	get_node(customer).visible = true
 	
+func make_invis():
+	get_node(customer).visible = false
 	
 func get_information(name:String):
 	var file = FileAccess.open("res://assets/customers.json", FileAccess.READ)

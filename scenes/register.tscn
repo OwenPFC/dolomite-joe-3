@@ -4,9 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://ho1o6coflisl" path="res://assets/register.png" id="2_ul2ju"]
 [ext_resource type="AudioStream" uid="uid://c745x0pv18rku" path="res://assets/audio/beep.wav" id="3_ul2ju"]
 [ext_resource type="Texture2D" uid="uid://bforx0enld4j4" path="res://assets/scanner.png" id="4_n2w5e"]
+[ext_resource type="Texture2D" uid="uid://cianpm86r58o0" path="res://assets/bag.png" id="5_i4ar7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2f0d4"]
 size = Vector2(115, 178)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwh7v"]
+size = Vector2(176, 202)
 
 [node name="register" type="Node2D" unique_id=1592666283]
 script = ExtResource("1_th0y5")
@@ -27,7 +31,23 @@ stream = ExtResource("3_ul2ju")
 pitch_scale = 1.81
 
 [node name="Scanner" type="Sprite2D" parent="." unique_id=1501880291]
+visible = false
+top_level = true
 position = Vector2(61, -52)
 texture = ExtResource("4_n2w5e")
 
+[node name="Bag" type="Sprite2D" parent="." unique_id=29502383]
+position = Vector2(-468, 13)
+scale = Vector2(0.57098764, 0.759366)
+texture = ExtResource("5_i4ar7")
+
+[node name="bag_area" type="Area2D" parent="Bag" unique_id=1710224223]
+position = Vector2(819.63245, -17.119545)
+scale = Vector2(1.7513514, 1.3168881)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bag/bag_area" unique_id=1288793239]
+position = Vector2(-467, 33)
+shape = SubResource("RectangleShape2D_vwh7v")
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Bag/bag_area" to="." method="_on_bag_area_area_entered"]
