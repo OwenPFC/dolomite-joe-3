@@ -1,6 +1,7 @@
 extends Node2D
 var size = randf_range(0.25,0.35)
-var splat = ["splat_geigerfish.png", "splat_tomato.png", "splat_water.png"]
+var splat = ["splat_geigerfish.png", "splat_tomato.png", "splat_water.png","splat_olive.png","splat_banana.png","splat_coffee.png"]
+#var splat = ["splat_geigerfish.png", "splat_tomato.png", "splat_water.png"]
 signal done(moppable)
 
 # Called when the node enters the scene tree for the first time.
@@ -8,7 +9,7 @@ func _ready() -> void:
 	global_position = Vector2(
 		300+randi_range(-250,800),300+randi_range(-250,300)
 		)
-	$Sprite2D.texture = load("assets/floor/"+splat[randi_range(0,2)])
+	$Sprite2D.texture = load("assets/floor/"+splat[randi_range(0,5)])
 	scale.x = size
 	scale.y = size
 

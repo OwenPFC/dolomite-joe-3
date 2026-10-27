@@ -1,7 +1,7 @@
 extends Node2D
 
 var dialogue = []
-var all_items = ["fish", "milk", "cereal", "tomato", "chorba", "rock"]
+var all_items = ["fish", "milk", "cereal", "tomato", "chorba", "rock", "ham"]
 var customers = ["meat", "blue", "kid", "purple", "cart", "joe", "JTH", "mail", "granny"]
 var grocery = load("res://scenes/grocery_2.tscn")
 signal done

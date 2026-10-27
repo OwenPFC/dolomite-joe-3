@@ -13,7 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://cm6vetoa7ei5t" path="res://assets/audio/death.mp3" id="10_t2aad"]
 [ext_resource type="FontFile" uid="uid://waf56aecnrdu" path="res://assets/PressStart2P-Regular.ttf" id="11_hnsn0"]
 [ext_resource type="Texture2D" uid="uid://c6y40xb0t8hw1" path="res://assets/customers/mail.PNG" id="12_hnsn0"]
-[ext_resource type="PackedScene" uid="uid://cv6wa0k8f3hth" path="res://scenes/transition.tscn" id="12_hnsn0"]
+[ext_resource type="PackedScene" uid="uid://cv6wa0k8f3hth" path="res://scenes/transition.tscn" id="13_0m07s"]
 [ext_resource type="AudioStream" uid="uid://ohaahf6mtoc2" path="res://assets/audio/modestas123123-cash-register-kaching-sound-effect-125042.mp3" id="13_r88ql"]
 
 [node name="Customer" type="Node2D" unique_id=1307362305]
@@ -86,7 +86,7 @@ stream = ExtResource("10_t2aad")
 wait_time = 3.0
 one_shot = true
 
-[node name="transition" parent="." unique_id=1524851347 instance=ExtResource("12_hnsn0")]
+[node name="transition" parent="." unique_id=1524851347 instance=ExtResource("13_0m07s")]
 top_level = true
 position = Vector2(712, 310)
 scale = Vector2(3, 2.954)
