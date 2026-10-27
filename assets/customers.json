@@ -1,8 +1,8 @@
 {"blue":{"Sprite":"blue", "Dialogue":
-	["d1", 
-	"d2", 
-	"d3",
-	"d4",
+	["God, I miss my gorgeous ex-wife Diane. What a stunner she was. Really opened up my heart and soul.", 
+	"My ex-wife Diane could see the beauty in everyone, even you.", 
+	"Diane saw my heart, not my misshapen head and deathlike pallor. What do you see?",
+	"I would describe my showstopping ex-wife Diane to you, but I'd rather you don't imagine her.",
 	"d5"]},
 "meat":{"Sprite":"meat", "Dialogue":
 	["Your deli selection isn't very good.",
@@ -11,15 +11,15 @@
 	"It's day 4",
 	"It's day 5"]},
 "kid":{"Sprite":"kid", "Dialogue":
-	["...",
-	"2",
-	"3",
-	"4",
-	"5"]},
+	["i really didnt expect my reincarnation to land me here, but i guess it's my divine punishment for my sins.",
+	"being an ipad baby is overrated. i wish i was part of one of the generations that was eating lead chips.",
+	"im 3 and a half and i wanna reach nirvana before im 5, so i should probably stop betting on horses so often.",
+	"have you see my mom? i may be hundreds of years old, but i am still an unaccompanied minor.",
+	"i think i should just stick to horse betting."]},
 "purple":{"Sprite":"purple", "Dialogue":
-	["Haha! Oh chip chop cheerio. Teehee. I just LOVE these groceries. Don't you?  Haha! So delightful.",
-	"Nothing like a trip to the grocery store! Hahaha! It's like everything I need is right here!",
-	"3",
+	["Haha! I just LOVE groceries. Don't you?  Haha! So delightful.",
+	"You know, my clients seem to just ADORE this place! I must say, I get why!",
+	"Come on, let me see a smile! Just one! It's a WONDERFUL day to buy groceries!",
 	"4",
 	"5"]},
 "cart":{"Sprite":"cart", "Dialogue":
@@ -34,6 +34,12 @@
 	"This register would be better if it ran ChromeOS...",
 	"Holy cow. Did you see Dolomite Joe is here? Wow. Star struck.",
 	"These are going to go directly into my Ninja Creami."]},	
+"mail":{"Sprite":"mail", "Dialogue":
+	["Yes, I am the man with mail. This is my purpose, yes.",
+	"Zipper? No, that is a scar from a childhood surgery. They replaced my human skeleton.",
+	"I am aware that my bag is wet, yes. Water helps grow the mail.",
+	"Tentacles? I'm not sure what those are, no.",
+	"Would you like this letter? It is addressed to 'Big Fella'. You may not be big enough."]},
 "joe":{"Sprite":"joe", "Dialogue":
 	["I'm dolomite joe I don't use ts"]}
 }
