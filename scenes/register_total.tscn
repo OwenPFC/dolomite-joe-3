@@ -1,3 +1,62 @@
 [gd_scene format=3 uid="uid://cwn42s6gp1au5"]
 
+[ext_resource type="Texture2D" uid="uid://cym8iu6ovew3s" path="res://assets/shelf.jpg" id="1_cwk3i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_de54k"]
+size = Vector2(132.5, 158)
+
 [node name="RegisterTotal" type="Node2D" unique_id=1387123805]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=270990391]
+z_as_relative = false
+position = Vector2(576, 324)
+texture = ExtResource("1_cwk3i")
+
+[node name="5dollar" type="Area2D" parent="." unique_id=599613163]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="5dollar" unique_id=331870234]
+position = Vector2(864, 471)
+shape = SubResource("RectangleShape2D_de54k")
+
+[node name="1dollar" type="Area2D" parent="." unique_id=124741642]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1dollar" unique_id=2051066350]
+position = Vector2(640, 474)
+shape = SubResource("RectangleShape2D_de54k")
+
+[node name="10dollar" type="Area2D" parent="." unique_id=1083198144]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="10dollar" unique_id=1651035112]
+position = Vector2(419, 479)
+shape = SubResource("RectangleShape2D_de54k")
+
+[node name="50dollar" type="Area2D" parent="." unique_id=2107436640]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="50dollar" unique_id=789867724]
+position = Vector2(218, 479)
+shape = SubResource("RectangleShape2D_de54k")
+
+[node name="penny" type="Area2D" parent="." unique_id=1735829034]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="penny" unique_id=618404964]
+position = Vector2(869, 170)
+shape = SubResource("RectangleShape2D_de54k")
+
+[node name="dime" type="Area2D" parent="." unique_id=1567013810]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dime" unique_id=1307108077]
+position = Vector2(635, 165)
+shape = SubResource("RectangleShape2D_de54k")
+
+[node name="nickel" type="Area2D" parent="." unique_id=1444853451]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nickel" unique_id=1693627035]
+position = Vector2(422, 167)
+shape = SubResource("RectangleShape2D_de54k")
+
+[node name="quarter" type="Area2D" parent="." unique_id=888095372]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quarter" unique_id=1358149838]
+position = Vector2(227, 162)
+shape = SubResource("RectangleShape2D_de54k")
