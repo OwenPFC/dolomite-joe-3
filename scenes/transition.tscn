@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cv6wa0k8f3hth"]
+
+[ext_resource type="Texture2D" uid="uid://bgbbem533ikfa" path="res://assets/transition/IMG_3539.PNG" id="1_0e1dl"]
+[ext_resource type="Script" uid="uid://c6oev1q7b0fgc" path="res://scenes/transition.gd" id="1_h1x1c"]
+[ext_resource type="Texture2D" uid="uid://dwlwvyhj0ygh5" path="res://assets/transition/transparent.png" id="1_qq3pt"]
+[ext_resource type="Texture2D" uid="uid://bav1p7ixnmyll" path="res://assets/transition/IMG_3538.PNG" id="2_h1x1c"]
+[ext_resource type="Texture2D" uid="uid://dluwltcosm5pt" path="res://assets/transition/IMG_3537.PNG" id="3_qq3pt"]
+[ext_resource type="Texture2D" uid="uid://bv0t22wa4ofc3" path="res://assets/transition/IMG_3536.PNG" id="4_m2cm2"]
+[ext_resource type="Texture2D" uid="uid://bps771taujtmc" path="res://assets/transition/IMG_3535.PNG" id="5_gkww1"]
+[ext_resource type="Texture2D" uid="uid://cmfml8v7o3y6n" path="res://assets/transition/IMG_3533.PNG" id="6_0h01k"]
+[ext_resource type="Texture2D" uid="uid://c1gq8cdd8ef62" path="res://assets/transition/IMG_3534.PNG" id="7_war6i"]
+[ext_resource type="Texture2D" uid="uid://cr6tab1ly0eea" path="res://assets/transition/IMG_3532.PNG" id="8_r72mv"]
+[ext_resource type="Texture2D" uid="uid://6lsr4s47410j" path="res://assets/transition/IMG_3531.PNG" id="9_eui2q"]
+[ext_resource type="Texture2D" uid="uid://dbudg84giik3o" path="res://assets/transition/IMG_3530.PNG" id="10_buutc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vwh7v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qq3pt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0e1dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h1x1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qq3pt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m2cm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gkww1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0h01k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_war6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r72mv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_eui2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_buutc")
+}],
+"loop": 0,
+"name": &"in",
+"speed": 7.0
+}]
+
+[node name="transition" type="AnimatedSprite2D" unique_id=1524851347]
+position = Vector2(604.5, 325.49997)
+scale = Vector2(1.1137153, 1.0972223)
+sprite_frames = SubResource("SpriteFrames_vwh7v")
+animation = &"in"
+script = ExtResource("1_h1x1c")

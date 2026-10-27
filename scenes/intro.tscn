@@ -2,6 +2,7 @@
 
 [ext_resource type="VideoStream" uid="uid://bnq7eo1vixnge" path="res://assets/videos/intro (1).mp4" id="1_ioskq"]
 [ext_resource type="Script" uid="uid://bf5qtjx2v8nmc" path="res://scenes/intro.gd" id="1_yjqpq"]
+[ext_resource type="PackedScene" uid="uid://cv6wa0k8f3hth" path="res://scenes/transition.tscn" id="3_4bx60"]
 
 [node name="intro" type="Node2D" unique_id=829481612]
 script = ExtResource("1_yjqpq")
@@ -10,11 +11,13 @@ script = ExtResource("1_yjqpq")
 offset_right = 1155.0
 offset_bottom = 654.0
 stream = ExtResource("1_ioskq")
-autoplay = true
 expand = true
 
 [node name="Timer" type="Timer" parent="." unique_id=1846564287]
 wait_time = 4.0
 
+[node name="transition" parent="." unique_id=1524851347 instance=ExtResource("3_4bx60")]
+
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]
