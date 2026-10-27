@@ -2,7 +2,6 @@ extends Node2D
 
 var toMop = []
 var moppable = load("res://scenes/moppable.tscn")
-var numMoppable = randi_range(12,24)
 signal mop_done
 var numMoppable = 4+((Global.dayCounter-1)*randi_range(4,6)+randi_range(1,3))
 
@@ -14,6 +13,7 @@ func _ready() -> void:
 		toMop[i].connect("done", _on_moppable_done)
 		add_child(toMop[i])
 		i+=1
+	$timer_display.set_floor()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

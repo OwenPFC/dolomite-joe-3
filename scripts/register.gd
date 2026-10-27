@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.get_parent() is Grocery:
 		$AudioStreamPlayer.play()
-		total += itemPrices.get(area.get_parent().name)
+		total += itemPrices.get(area.get_parent().grocery_name)
 
 func on_done():
 	print(total)

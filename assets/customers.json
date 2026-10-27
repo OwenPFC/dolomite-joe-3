@@ -28,6 +28,12 @@
 	"3",
 	"4",
 	"5"]},
+"JTH":{"Sprite":"JTH", "Dialogue":
+	["Just buying my groceries... WOAH.. I don't remember putting tax in my cart",
+	"Did you know if you put these in the freezer they taste WAY better?",
+	"This register would be better if it ran ChromeOS...",
+	"Holy cow. Did you see Dolomite Joe is here? Wow. Star struck.",
+	"These are going to go directly into my Ninja Creami."]},	
 "joe":{"Sprite":"joe", "Dialogue":
 	["I'm dolomite joe I don't use ts"]}
 }

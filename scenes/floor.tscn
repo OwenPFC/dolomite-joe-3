@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cgextups4ti1j" path="res://scripts/floor.gd" id="1_ukw5w"]
 [ext_resource type="PackedScene" uid="uid://boo8qf0oeoa1k" path="res://scenes/mop.tscn" id="2_whr1e"]
 [ext_resource type="Texture2D" uid="uid://st0j68dl1spf" path="res://assets/floor/creepy_floor.png.jpg" id="3_whr1e"]
+[ext_resource type="PackedScene" uid="uid://dnrmap6l76lfs" path="res://scenes/timer_display.tscn" id="4_3lc0u"]
 
 [node name="Floor" type="Node2D" unique_id=882505732]
 top_level = true
@@ -15,3 +16,5 @@ position = Vector2(845, 318)
 [node name="CreepyFloor_png" type="Sprite2D" parent="." unique_id=120877398]
 position = Vector2(576, 324)
 texture = ExtResource("3_whr1e")
+
+[node name="timer_display" parent="." unique_id=260976080 instance=ExtResource("4_3lc0u")]

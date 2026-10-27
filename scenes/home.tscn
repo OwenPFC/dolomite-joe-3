@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://5e1ldrl735i6" path="res://assets/home_draft.jpg" id="1_krot7"]
 [ext_resource type="Script" uid="uid://b7vsd1u7c03sm" path="res://scripts/home.gd" id="1_u4wd2"]
 [ext_resource type="AudioStream" uid="uid://2ghv70u5mheh" path="res://assets/audio/dolomite3_home_sweat_home.wav" id="3_w18ys"]
+[ext_resource type="VideoStream" uid="uid://lnk4caet1d10" path="res://assets/videos/monkey.mp4" id="4_reixx"]
 
 [node name="home" type="Node2D" unique_id=292318424]
 script = ExtResource("1_u4wd2")
@@ -19,5 +20,14 @@ autostart = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1035475279]
 stream = ExtResource("3_w18ys")
 autoplay = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=727426380]
+offset_left = 345.0
+offset_top = 278.0
+offset_right = 776.0
+offset_bottom = 360.0
+stream = ExtResource("4_reixx")
+autoplay = true
+expand = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -2,7 +2,7 @@ extends Node2D
 
 var dialogue = []
 var all_items = ["fish", "milk", "cereal", "tomato", "chorba", "rock"]
-var customers = ["meat", "blue", "kid", "purple", "cart", "joe"]
+var customers = ["meat", "blue", "kid", "purple", "cart", "joe", "JTH"]
 var grocery = load("res://scenes/grocery_2.tscn")
 signal done
 signal joe
@@ -29,6 +29,7 @@ func _process(delta: float) -> void:
 func new_day():
 	get_tree().change_scene_to_file("res://scenes/home.tscn")
 	pass
+	
 
 #append random elements to the shoppers things to buy
 func init_items():
@@ -47,9 +48,10 @@ func init_items():
 		var type = all_items[randi_range(0, len(all_items)-1)]
 		var sprite = "res://assets/groceries/" + type + ".png"
 		item.set_sprite(sprite)
-		item.name = type
+		item.grocery_name = type
 
 func init_customer():
+	$timer_display.set_register()
 	customer = pick_customer()
 	if customer == null:
 		new_day()
@@ -61,6 +63,7 @@ func init_customer():
 			add_customer.emit(customer_info["Dialogue"])
 		else:
 			times_joe_seen+=1
+			$timer_display.joe_timer()
 			joe.emit()
 			if times_joe_seen > day:
 				customers.remove_at(customers.find(customer))
@@ -68,8 +71,8 @@ func init_customer():
 	
 func pick_customer():
 	#Don't let joe be picked first
-	if len(customers) == 6:
-		return ["meat", "blue", "kid", "purple", "cart"].pick_random()
+	if len(customers) == 7:
+		return ["meat", "blue", "kid", "purple", "cart", "JTH"].pick_random()
 	if len(customers) == 1 and customers[0] == "joe" and times_joe_seen > 1:
 		return null
 	if len(customers) == 0:
@@ -86,3 +89,7 @@ func get_information(name:String):
 	var data = JSON.parse_string(json)
 	file.close()
 	return data[name]
+
+
+func _on_timer_display_fail() -> void:
+	print("boo")

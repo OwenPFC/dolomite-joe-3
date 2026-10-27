@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://crb1llql6r0ac" path="res://assets/customers/mussorgsky.png" id="5_qqxhk"]
 [ext_resource type="Texture2D" uid="uid://dd0px5malodrp" path="res://assets/customers/purple.png" id="6_846g6"]
 [ext_resource type="Texture2D" uid="uid://d10kn8yp6amsi" path="res://assets/customers/joe.png" id="7_qj8gj"]
+[ext_resource type="Texture2D" uid="uid://bktn66t7owu0g" path="res://assets/customers/JTH.PNG" id="8_w2wat"]
+[ext_resource type="PackedScene" uid="uid://dnrmap6l76lfs" path="res://scenes/timer_display.tscn" id="9_pk6lr"]
 
 [node name="Customer" type="Node2D" unique_id=1307362305]
 script = ExtResource("1_ktfjk")
@@ -45,5 +47,17 @@ visible = false
 position = Vector2(-6, 43)
 texture = ExtResource("7_qj8gj")
 
+[node name="JTH" type="Sprite2D" parent="." unique_id=430814358]
+visible = false
+position = Vector2(0, 8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_w2wat")
+
 [node name="groceries" type="Node2D" parent="." unique_id=849439130]
 position = Vector2(0, 176)
+
+[node name="timer_display" parent="." unique_id=260976080 instance=ExtResource("9_pk6lr")]
+position = Vector2(-793, -326)
+scale = Vector2(0.8, 0.8)
+
+[connection signal="fail" from="timer_display" to="." method="_on_timer_display_fail"]

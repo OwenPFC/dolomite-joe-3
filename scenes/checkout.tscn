@@ -24,7 +24,7 @@ position = Vector2(618, 523)
 texture = ExtResource("3_pgd0o")
 
 [node name="speech" parent="." unique_id=971826987 instance=ExtResource("5_ordwr")]
-position = Vector2(274, 26)
+position = Vector2(9, 56)
 
 [node name="clean" type="Button" parent="speech" unique_id=983256685]
 visible = false
