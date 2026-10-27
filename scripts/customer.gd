@@ -2,7 +2,7 @@ extends Node2D
 
 var dialogue = []
 var all_items = ["fish", "milk", "cereal", "tomato", "chorba", "rock"]
-var customers = ["meat", "blue", "kid", "purple", "cart", "joe", "JTH"]
+var customers = ["meat", "blue", "kid", "purple", "cart", "joe", "JTH", "mail", "granny"]
 var grocery = load("res://scenes/grocery_2.tscn")
 signal done
 signal joe
@@ -74,8 +74,8 @@ func init_customer():
 	
 func pick_customer():
 	#Don't let joe be picked first
-	if len(customers) == 7:
-		return ["meat", "blue", "kid", "purple", "cart", "JTH"].pick_random()
+	if len(customers) == 9:
+		return ["meat", "blue", "kid", "purple", "cart", "JTH", "mail", "granny"].pick_random()
 	if len(customers) == 1 and customers[0] == "joe" and times_joe_seen > 1:
 		return null
 	if len(customers) == 0:

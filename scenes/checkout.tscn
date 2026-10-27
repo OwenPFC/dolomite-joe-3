@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://biinpk4iqe3w8" path="res://scenes/speech.tscn" id="5_ordwr"]
 [ext_resource type="FontFile" uid="uid://waf56aecnrdu" path="res://assets/PressStart2P-Regular.ttf" id="6_7v35x"]
 [ext_resource type="Texture2D" uid="uid://dkwfr7degpwy6" path="res://assets/customer_gun/JTH.PNG" id="7_7v35x"]
+[ext_resource type="AudioStream" uid="uid://br3ev7xxpeg7m" path="res://assets/audio/splat.mp3" id="7_dxmdn"]
 
 [node name="checkout" type="Node2D" unique_id=301317347]
 script = ExtResource("1_okuuy")
@@ -36,6 +37,9 @@ offset_bottom = 220.0
 theme_override_fonts/font = ExtResource("6_7v35x")
 text = "Go clean."
 
+[node name="splat" type="AudioStreamPlayer" parent="speech/clean" unique_id=992837955]
+stream = ExtResource("7_dxmdn")
+
 [node name="joe_fail" type="Sprite2D" parent="." unique_id=64979112]
 visible = false
 top_level = true
@@ -62,5 +66,6 @@ text = "Menu"
 position = Vector2(443, 558)
 
 [connection signal="pressed" from="speech/clean" to="." method="_on_clean_pressed"]
+[connection signal="pressed" from="speech/clean" to="speech/clean/splat" method="play"]
 [connection signal="timeout" from="die_timer" to="." method="_on_die_timer_timeout"]
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
