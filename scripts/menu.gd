@@ -10,6 +10,9 @@ func _ready() -> void:
 func _on_start_pressed() -> void:
 	if day == 1 and !Global.get_information("cutscene"):
 		get_tree().change_scene_to_file("res://scenes/intro.tscn")
+	if day >= 6:
+		$Computer/start.text = "No More"
+		$Computer/start.disabled = true
 	else:
 		get_tree().change_scene_to_file("res://scenes/checkout.tscn")
 
