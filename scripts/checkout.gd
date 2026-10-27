@@ -13,6 +13,7 @@ var register_total = load("res://scenes/register_total.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$register.connect("sent", _on_total_tallied)
+	day = Global.dayCounter
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -31,11 +32,20 @@ func pick_joe_text():
 	var t = joe_text.pick_random()
 	joe_text.remove_at(joe_text.find(t))
 	return t
+	
+func on_josh_fail():
+	$joe_fail.visible = true
+	$die_timer.start()
+	$music.stream = load("res://assets/audio/dolomite3_home_sweat_home.wav")
+	$music.playing = true
+	$music.volume_db += 5
+	$music.pitch_scale = 0.4
 
-func new_day():
-	#Reset joe dialogue
-	#Hopefully we don't need to reset if we can get to 21 or 22 speeches
-	pass
+func on_customer_fail():
+	$music.stream = load("res://assets/audio/dolomite3_home_sweat_home.wav")
+	$music.playing = true
+	$music.volume_db += 5
+	$music.pitch_scale = 0.4
 
 func _on_clean_pressed() -> void:
 	var f = floor.instantiate()
@@ -50,3 +60,11 @@ func on_mop_done():
 func _on_total_tallied(total) -> void:
 	register_total.instantiate()
 	#register_total.total = total
+
+
+func _on_die_timer_timeout() -> void:
+	$menu.visible = true
+
+
+func _on_menu_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crb1llql6r0ac"
-path="res://.godot/imported/mussorgsky.png-d070ed5046f5a3d9fa41c356884cfa5e.ctex"
+uid="uid://dkwfr7degpwy6"
+path="res://.godot/imported/JTH.PNG-2dedff120efe06147646036fa3abcd12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/customers/mussorgsky.png"
-dest_files=["res://.godot/imported/mussorgsky.png-d070ed5046f5a3d9fa41c356884cfa5e.ctex"]
+source_file="res://assets/customer_gun/JTH.PNG"
+dest_files=["res://.godot/imported/JTH.PNG-2dedff120efe06147646036fa3abcd12.ctex"]
 
 [params]
 

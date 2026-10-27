@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://00diuf664a1h"
-path="res://.godot/imported/blue.jpg-bfd525513a917cfbb8442602be983a76.ctex"
+uid="uid://bucy1pqkesske"
+path="res://.godot/imported/meat.png-b88623c1aff334d78bfe825ad6bcb647.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/customers/blue.jpg"
-dest_files=["res://.godot/imported/blue.jpg-bfd525513a917cfbb8442602be983a76.ctex"]
+source_file="res://assets/customer_gun/meat.png"
+dest_files=["res://.godot/imported/meat.png-b88623c1aff334d78bfe825ad6bcb647.ctex"]
 
 [params]
 

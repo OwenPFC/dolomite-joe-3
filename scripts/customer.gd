@@ -6,6 +6,8 @@ var customers = ["meat", "blue", "kid", "purple", "cart", "joe", "JTH"]
 var grocery = load("res://scenes/grocery_2.tscn")
 signal done
 signal joe
+signal josh_fail
+signal customer_fail
 signal add_customer(text)
 var customer
 var times_joe_seen = 0
@@ -19,7 +21,10 @@ func _ready() -> void:
 			connect("joe", get_parent().on_joe)
 		if !is_connected("add_customer", get_parent().on_add_customer):
 			connect("add_customer", get_parent().on_add_customer)
-	
+		if !is_connected("josh_fail", get_parent().on_josh_fail):
+			connect("josh_fail", get_parent().on_josh_fail)
+		if !is_connected("customer_fail", get_parent().on_customer_fail):
+			connect("customer_fail", get_parent().on_customer_fail)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -28,8 +33,6 @@ func _process(delta: float) -> void:
 
 func new_day():
 	get_tree().change_scene_to_file("res://scenes/home.tscn")
-	pass
-	
 
 #append random elements to the shoppers things to buy
 func init_items():
@@ -92,4 +95,20 @@ func get_information(name:String):
 
 
 func _on_timer_display_fail() -> void:
-	print("boo")
+	$groceries.visible = false
+	get_parent().get_node("speech").visible = false
+	get_node(customer).texture = load("res://assets/customer_gun/" + customer + ".png")
+	if customer == "JTH":
+		josh_fail.emit()
+	else:
+		customer_fail.emit()
+		$Timer.start()
+		$death.play()
+
+
+func _on_timer_timeout() -> void:
+	$menu.visible = true
+
+
+func _on_menu_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

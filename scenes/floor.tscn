@@ -18,3 +18,5 @@ position = Vector2(576, 324)
 texture = ExtResource("3_whr1e")
 
 [node name="timer_display" parent="." unique_id=260976080 instance=ExtResource("4_3lc0u")]
+
+[connection signal="fail" from="timer_display" to="." method="_on_timer_display_fail"]

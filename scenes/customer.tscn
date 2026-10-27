@@ -4,11 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://bba6xx8p2gf15" path="res://assets/customers/meat.png" id="2_xss0h"]
 [ext_resource type="Texture2D" uid="uid://osywligbanvg" path="res://assets/customers/blue.png" id="3_8qg4y"]
 [ext_resource type="Texture2D" uid="uid://vcmfxyj5smdw" path="res://assets/customers/kid.png" id="4_rjbu2"]
-[ext_resource type="Texture2D" uid="uid://crb1llql6r0ac" path="res://assets/customers/mussorgsky.png" id="5_qqxhk"]
+[ext_resource type="Texture2D" uid="uid://djonbrwv656op" path="res://assets/customers/cart.png" id="5_pk6lr"]
 [ext_resource type="Texture2D" uid="uid://dd0px5malodrp" path="res://assets/customers/purple.png" id="6_846g6"]
 [ext_resource type="Texture2D" uid="uid://d10kn8yp6amsi" path="res://assets/customers/joe.png" id="7_qj8gj"]
 [ext_resource type="Texture2D" uid="uid://bktn66t7owu0g" path="res://assets/customers/JTH.PNG" id="8_w2wat"]
 [ext_resource type="PackedScene" uid="uid://dnrmap6l76lfs" path="res://scenes/timer_display.tscn" id="9_pk6lr"]
+[ext_resource type="AudioStream" uid="uid://cm6vetoa7ei5t" path="res://assets/audio/death.mp3" id="10_t2aad"]
+[ext_resource type="FontFile" uid="uid://waf56aecnrdu" path="res://assets/PressStart2P-Regular.ttf" id="11_hnsn0"]
 
 [node name="Customer" type="Node2D" unique_id=1307362305]
 script = ExtResource("1_ktfjk")
@@ -21,24 +23,25 @@ texture = ExtResource("2_xss0h")
 
 [node name="blue" type="Sprite2D" parent="." unique_id=1657606642]
 visible = false
-position = Vector2(0, 8)
+position = Vector2(0, 33.000004)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_8qg4y")
 
 [node name="kid" type="Sprite2D" parent="." unique_id=1481247915]
 visible = false
-position = Vector2(0, 151.99998)
-scale = Vector2(0.5, 0.5)
+position = Vector2(0, 79.999985)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_rjbu2")
 
 [node name="cart" type="Sprite2D" parent="." unique_id=82758729]
 visible = false
 position = Vector2(8, 23.999998)
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("5_qqxhk")
+texture = ExtResource("5_pk6lr")
 
 [node name="purple" type="Sprite2D" parent="." unique_id=146589723]
 visible = false
+position = Vector2(0, -23.999996)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_846g6")
 
@@ -49,7 +52,7 @@ texture = ExtResource("7_qj8gj")
 
 [node name="JTH" type="Sprite2D" parent="." unique_id=430814358]
 visible = false
-position = Vector2(0, 8)
+position = Vector2(0, 24)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("8_w2wat")
 
@@ -60,4 +63,23 @@ position = Vector2(0, 176)
 position = Vector2(-793, -326)
 scale = Vector2(0.8, 0.8)
 
+[node name="death" type="AudioStreamPlayer" parent="." unique_id=1677616808]
+stream = ExtResource("10_t2aad")
+
+[node name="Timer" type="Timer" parent="." unique_id=1248368541]
+wait_time = 10.0
+
+[node name="menu" type="Button" parent="." unique_id=2067616859]
+visible = false
+top_level = true
+offset_left = 844.0
+offset_top = 52.0
+offset_right = 992.0
+offset_bottom = 100.0
+theme_override_colors/icon_normal_color = Color(1, 0.5058824, 0, 1)
+theme_override_fonts/font = ExtResource("11_hnsn0")
+text = "Menu"
+
 [connection signal="fail" from="timer_display" to="." method="_on_timer_display_fail"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

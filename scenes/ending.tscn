@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://o2td8igqqpbe"]
+
+[ext_resource type="Texture2D" uid="uid://bsvt5f6srmfaj" path="res://assets/ending.png" id="1_mqjok"]
+[ext_resource type="AudioStream" uid="uid://ckkxnhqtgvuw8" path="res://assets/audio/AdP-I_02-au-lac-de-wallenstadt-SF2011.mp3" id="2_fyrdv"]
+
+[node name="ending" type="Node2D" unique_id=2109262711]
+
+[node name="Ending" type="Sprite2D" parent="." unique_id=79377162]
+position = Vector2(585.99994, 321)
+scale = Vector2(1.6567568, 1.6732672)
+texture = ExtResource("1_mqjok")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=565845199]
+stream = ExtResource("2_fyrdv")
+autoplay = true

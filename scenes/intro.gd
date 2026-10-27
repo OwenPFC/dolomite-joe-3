@@ -20,4 +20,5 @@ func _on_video_stream_player_finished() -> void:
 
 
 func _on_timer_timeout() -> void:
+	Global.save_information("cutscene", true)
 	get_tree().change_scene_to_file("res://scenes/checkout.tscn")
