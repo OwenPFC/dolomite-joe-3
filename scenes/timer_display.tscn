@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dnrmap6l76lfs"]
+
+[ext_resource type="Texture2D" uid="uid://dk2wgbmfj2s0h" path="res://assets/white.png" id="1_mhvr4"]
+[ext_resource type="Script" uid="uid://ciefcxse7xx0b" path="res://scenes/timer_display.gd" id="1_wwpqk"]
+[ext_resource type="FontFile" uid="uid://waf56aecnrdu" path="res://assets/PressStart2P-Regular.ttf" id="2_wwpqk"]
+
+[node name="timer_display" type="Node2D" unique_id=260976080]
+script = ExtResource("1_wwpqk")
+
+[node name="Timer" type="Timer" parent="." unique_id=1421845369]
+wait_time = 30.0
+one_shot = true
+
+[node name="display" type="Node2D" parent="." unique_id=767903529]
+visible = false
+
+[node name="background" type="Sprite2D" parent="display" unique_id=838916716]
+modulate = Color(0.28235295, 0.28235295, 0.28235295, 0.69411767)
+position = Vector2(192.1813, 21.659307)
+rotation = -3.1415925
+scale = Vector2(191.68343, -21.306595)
+texture = ExtResource("1_mhvr4")
+
+[node name="text" type="Label" parent="display" unique_id=2003503221]
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 220.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("2_wwpqk")
+text = "Time To Checkout:"
+
+[node name="number" type="Label" parent="display" unique_id=1354230983]
+offset_left = 290.0
+offset_top = 9.0
+offset_right = 370.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("2_wwpqk")
+text = "0"
+
+[node name="display_floor" type="Node2D" parent="." unique_id=441768907]
+visible = false
+
+[node name="background" type="Sprite2D" parent="display_floor" unique_id=247338363]
+modulate = Color(0.28235295, 0.28235295, 0.28235295, 0.69411767)
+position = Vector2(173.17303, 21.659304)
+rotation = -3.1415925
+scale = Vector2(172.67519, -21.306595)
+texture = ExtResource("1_mhvr4")
+
+[node name="text" type="Label" parent="display_floor" unique_id=1065993287]
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 220.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("2_wwpqk")
+text = "Time To Clean:"
+
+[node name="number" type="Label" parent="display_floor" unique_id=1083084370]
+offset_left = 242.0
+offset_top = 9.0
+offset_right = 322.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("2_wwpqk")
+text = "0"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
